@@ -68,7 +68,7 @@ export class SimpleWeatherNewsCdkProjectStack extends cdk.Stack {
 
 
     // GET /{cityId} エンドポイント
-    const getCityIntegration = new integrations.HttpLambdaIntegration('GetCityWeatherIntegration', get_city_weather_public_function ); //TODO(Day10-02)
+    const getCityIntegration = new integrations.HttpLambdaIntegration('GetCityWeatherIntegration', getCityWeatherPublicFunction ); //TODO(Day10-02)
     httpApi.addRoutes({
       path: '/cityId}', //TODO(Day10-02)
       methods: [apigatewayv2.HttpMethod.GET],
